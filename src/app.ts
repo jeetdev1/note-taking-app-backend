@@ -4,6 +4,7 @@ import router from "./routes/index";
 const app: Express = express();
 
 app.use(morgan("tiny"));
+
 app.use(express.json());
 
 app.use("/v1", router);
