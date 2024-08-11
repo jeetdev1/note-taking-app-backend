@@ -1,8 +1,11 @@
 import { Router } from "express";
-import notesRouter from "./notesRoute";
-
+import adminRouter from "./admin";
+import authRouter from "./authRoute";
+import notebooksRouter from "./notebooksRoute";
 const router = Router();
 
-router.use("/notes", notesRouter);
+router.use("/notebooks", notebooksRouter);
+router.use("/", authRouter);
+router.use("/admin", adminRouter);
 
 export default router;
